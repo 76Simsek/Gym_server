@@ -1,0 +1,22 @@
+
+GET http://localhost:5000/gym
+
+
+GET http://localhost:3001/workout
+
+
+GET http://localhost:3001/workout/Push
+
+
+GET http://localhost:3001/gym/Push
+
+###
+POST http://localhost:3001/gym
+content-Type: application/json
+
+{
+    "gym" : "Fit one",
+    "date": "2023-10-26",
+    "plan": "Pull",
+    "kommentar": ""
+}
