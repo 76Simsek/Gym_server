@@ -47,8 +47,8 @@ const getPlanWorkout = async (plan) => {
     `
     select u.id gym_id, g.plan, u.übung, concat(u.repw1,' x ',u.weightw1, 'KG') as Wdh1, g.date,
        concat(extract(day from g.date),'.',extract(month from g.date),'.',extract(year from g.date)) as datum,
-       (case when u.repw4 != 0 then concat(u.repw2,' x ', u.weightw2) end) as Wdh2,
-       (case when u.repw4 != 0 then concat(u.repw3,' x ', u.weightw3) end) as Wdh3,
+       (case when u.repw2 != 0 then concat(u.repw2,' x ', u.weightw2) end) as Wdh2,
+       (case when u.repw3 != 0 then concat(u.repw3,' x ', u.weightw3) end) as Wdh3,
        (case when u.repw4 != 0 then concat(u.repw4,' x ', u.weightw4) end) as Wdh4,
        (case when u.repw5 != 0 then concat(u.repw5,' x ', u.weightw5, 'KG') end) as Wdh5,
        u.drop, g.kommentar
